@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'arial',sans-serif;
+    box-sizing:border-box;
+
+box-sizing:border-box
+}
+.container{
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677,#4e085f);
+    padding:10px
+}
+.todo-app{
+     width:100%;
+     background: #fff;
+     margin: 100px auto 20px;
+     padding:40px 30px 70px;
+     border-radius: 10px;
+     max-width: 540px;
+}
+.todo-app h2{
+    color: #002765;
+    display:flex;
+    align-items:center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left:10px ;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25p;
+}
+input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:10px;
+}
+button{
+    border:none;
+    outline:none;
+    padding:16px 50px;
+    background:#ff5945;
+    color: #ffff;
+    font: size 16px;
+    cursor:pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style:none;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position:relative;
+}
+ul li::before{
+    content:'';
+    position:absolute;
+    height: 28px;
+    width:28px;
+    border-radius: 50%;
+    background-image: url(data:image/png;base64,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);
+    background-size: cover;
+    background-position: center;
+    top:12px;
+    left:8px;
+}
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(https://static.vecteezy.com/system/resources/thumbnails/016/774/415/small/green-check-mark-icon-on-transparent-background-free-png.png);
+    
+}
+ul li span{
+    position:absolute;
+    right:0;
+    top:5px;
+    width:40px;
+    height:40px;
+    font-size:22px;
+    color:#555;
+    line-height:40px;
+    text-align:center;
+    border-radius: 50px;
+}
+ul li span:hover{
+    background:#edeef0;
+}
